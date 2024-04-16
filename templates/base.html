@@ -97,6 +97,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.min.css" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="{% static 'css/dashboard.css' %}" rel="stylesheet"> 
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
   </head>
   <body>
     <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
@@ -245,7 +246,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link d-flex align-items-center gap-2" href="#">
+              <a class="nav-link d-flex align-items-center gap-2" href="{% url 'servicos:lista_servicos' %}">
                 <svg class="bi"><use xlink:href="#cart"/></svg>
                 Serviços
               </a>
@@ -276,7 +277,7 @@
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4"> 
         {% block main %}
         
-         {% endblock main %}
+        {% endblock main %}
     </main>
   </div>
     <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>

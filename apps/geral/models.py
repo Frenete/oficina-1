@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 
 # Create your models here.
 
+
 class Oficina(models.Model):
     usuario = models.ForeignKey(User, verbose_name='Usuario', on_delete=models.CASCADE)
     nome = models.CharField(verbose_name='Nome', max_length=100)

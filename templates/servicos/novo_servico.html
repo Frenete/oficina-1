@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load widget_tweaks %}
+
+{% block titulo %}
+
+	 Servico | {{ block.super }}
+
+{% endblock titulo %}
+
+
+{% block main %}
+    <form method="post">
+        {% csrf_token %}
+        
+        <div class="mb-3">
+            <label for="{{ form.nome.id_for_label }}" class="form-label">{{ form.nome.label }}</label>
+            {% render_field form.nome class='form-control' placeholder='Digite o Serviço a ser feito....' %}
+        </div>  
+    
+         <div class="mb-3">
+            <label for="{{ form.descricao.id_for_label }}" class="form-label">{{ form.descricao.label }}</label>
+            {% render_field form.descricao class='form-control' placeholder='Digite a descrição do serviço....' %}
+        </div>
+        
+        <div class="mb-3">
+            <label for="{{ form.valor.id_for_label }}" class="form-label">{{ form.valor.label }}</label>
+            {% render_field form.valor class='form-control' placeholder='Digite o valor do serviço....' %}        
+        </div>
+        
+        <div class="mb-3">
+            <label for="{{ form.comissao.id_for_label }}" class="form-label">{{ form.comissao.label }}</label>
+            {% render_field form.comissao class='form-control' placeholder='Digite a comissão....' %}
+        </div>
+    
+        <button type="submit" class="btn btn-primary"> Adcionar </button>
+        <a href="lista_servico.html" class="btn btn-outline-secondary">Cancelar</a>
+    </form>
+{% endblock main %}

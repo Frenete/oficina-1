@@ -23,8 +23,8 @@
                 <td>{{ oficina.nome }}</td>
                 <td>{{ oficina.cnpj }}</td>
                 <td>{{ oficina.telefone }}</td>
-                <td><a href="" class="btn btn-outline-info btn-sm">Editar</a>
-                    <a href="" class="btn btn-outline-danger btn-sm">Excluir</a>
+                <td><a href="{% url 'geral:editar_oficina' oficina.id %}" class="btn btn-outline-info btn-sm">Editar <i class="ph ph-recycle"></i> </a>
+                    <a href="{% url 'geral:excluir_oficina' oficina.id %}" class="btn btn-outline-danger btn-sm">Excluir <i class="ph ph-axe"></i> </a>
                 </td>
         </tr>
         {% endfor %}       

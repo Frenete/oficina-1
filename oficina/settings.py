@@ -155,5 +155,5 @@ MESSAGE_TAGS = {
     messages.SUCCESS: 'alert alert-success',
     messages.INFO:'alert alert-info',
     messages.WARNING: 'alert alert-warning',
-    messages.ERROR: 'alert alert-error',
+    messages.ERROR: 'alert alert-danger',
 }
